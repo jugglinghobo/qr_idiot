@@ -8,7 +8,8 @@ require 'haml'
 require 'sass'
 
 get '/' do
-  haml :new
+  @posts = Post.all
+  haml :posts
 end
 
 post '/create' do
@@ -22,9 +23,8 @@ post '/create' do
 end
 
 
-get '/posts' do
-  @posts = Post.all
-  haml :posts
+get '/new' do
+  haml :new
 end
 
 SASS_DIR = File.expand_path("../public/stylesheets", __FILE__)

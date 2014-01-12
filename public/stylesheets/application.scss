@@ -7,17 +7,18 @@ $border: lightgrey;
 body {
   font: 62.5%/1.5  "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
   background: #ffffff;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 #header {
   margin-top: 5%;
-}
 
-#sitebar {
-  float: left;
-  width: 25%;
-  height: 100%;
-  min-height: 100%;
+  #gif {
+    text-align: center;
+  }
 }
 
 #smiley {
@@ -33,10 +34,6 @@ body {
 }
 
 #content {
-  float: left;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
 
   #headline {
     display: table-cell;

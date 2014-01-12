@@ -26,7 +26,9 @@ post '/create' do
   @post = Post.new params[:post]
   if @post.body?
     @post.save!
-    @@image_url = params[:image_url]
+    new_image_url = params[:image_url].presence || @post.image_url
+    puts "NEW IMAGE URL: #{new_image_url}"
+    @@image_url = new_image_url
     redirect '/posts'
   else
     redirect '/'

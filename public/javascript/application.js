@@ -23,6 +23,10 @@ var Application = function() {
         $("#new_image").toggle(false);
       }).attr('src', img_url);
     });
+
+    $("#new_image_input").on("focusout", "input", function() {
+      $("#loading").toggle(false);
+    })
   }
 
   return {

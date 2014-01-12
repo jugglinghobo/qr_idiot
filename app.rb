@@ -7,7 +7,7 @@ require './environments'
 require 'haml'
 require 'sass'
 
-@@image_url = "http://cdn.weknowgifs.com/wp-content/uploads/2013/05/spock-eating-pizza-gif.gif"
+@@image_url = "http://i.imgur.com/dBjHVLF.png"
 
 get '/' do
   image_url

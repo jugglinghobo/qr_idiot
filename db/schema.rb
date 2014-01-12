@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20140111225233) do
 
   create_table "posts", force: true do |t|
-    t.string   "username"
+    t.string   "author"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"

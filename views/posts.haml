@@ -1,0 +1,8 @@
+%h1 Enjoy the company of other people that were able to find this place
+%ul#post_list
+  - @posts.each do |post|
+    %li.post
+      .author
+        = post.author
+      .body
+        = post.body

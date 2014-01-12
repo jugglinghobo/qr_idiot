@@ -1,0 +1,9 @@
+%form{:action => "/create", :method => "post", :id => "new_form"}
+  %ul
+    %li
+      %label{:for => "post[author]"} Name:
+      %input{:type => "text", :name => "post[author]"}
+    %li
+      %label{:for => "post[body]"} Message:
+      %textarea{:name => "post[body]"}
+  %input{:type => "submit", :class => "button"}

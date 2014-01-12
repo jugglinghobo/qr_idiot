@@ -20,6 +20,8 @@ GEM
     atomic (1.1.14)
     bond (0.4.3)
     builder (3.1.4)
+    haml (4.0.5)
+      tilt
     i18n (0.6.9)
     minitest (4.7.5)
     multi_json (1.8.4)
@@ -37,6 +39,7 @@ GEM
       rack (>= 1.0)
       rack-test (>= 0.5)
       ripl (>= 0.3.5)
+    sass (3.2.13)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -60,7 +63,9 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  haml
   pg
+  sass
   sinatra
   sinatra-activerecord
   sqlite3

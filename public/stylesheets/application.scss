@@ -1,0 +1,62 @@
+.clear {
+  clear:both;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+body {
+  font: 62.5%/1.5  "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+  background: #ffffff;
+  width: 60%;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content {
+
+  ul {
+    list-style: none;
+    display: table;
+  }
+
+  li {
+    display: table-row;
+  }
+
+
+  label {
+    display: table-cell;
+    width: 10%;
+    vertical-align: middle;
+  }
+
+  input, textarea {
+    display: table-cell;
+  }
+
+  #post_list {
+    list-style: none;
+    margin-left: 10%;
+  }
+
+  .post {
+    padding: 10px;
+  }
+
+  .author {
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  .body {
+    display: inline-block;
+  }
+
+}

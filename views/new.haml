@@ -1,9 +1,13 @@
+#headline
+  = "Und dafür haben Sie jetzt extra diesen Code eingescannt..."
 %form{:action => "/create", :method => "post", :id => "new_form"}
   %ul
     %li
-      %label{:for => "post[author]"} Name:
-      %input{:type => "text", :name => "post[author]"}
+      %textarea{:name => "post[body]", :placeholder => "Lassen Sie ihren Gefühlen freien lauf", :id => "body"}
     %li
-      %label{:for => "post[body]"} Message:
-      %textarea{:name => "post[body]"}
-  %input{:type => "submit", :class => "button"}
+      %input{:type => "text", :name => "post[author]", :placeholder => "Name", :id => "author"}
+    %li
+      %label= "Ich akzeptiere, dass Ich gerade zwei Minuten meines Lebens verschwendet habe"
+      %input{:type => "checkbox"}
+    %li
+      %input{:type => "submit", :value => "QR codes sind dumm", :class => "button", :id => "submit"}

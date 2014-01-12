@@ -1,8 +1,13 @@
-%h1 Enjoy the company of other people that were able to find this place
+#headline
+  = "Keine Sorge, Sie sind nicht alleine..."
+%hr
 %ul#post_list
   - @posts.each do |post|
-    %li.post
-      .author
-        = post.author
-      .body
+    .post
+      %li.body
         = post.body
+      %li.author
+        .inline -
+        .inline
+          = post.author
+    %hr

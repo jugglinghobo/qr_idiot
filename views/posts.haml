@@ -5,10 +5,13 @@
   %ul#post_list
     - @posts.each do |post|
       .post
-        %li.body
-          = post.body
-        %li.author
-          .inline -
-          .inline
-            = post.author
+        .image
+          %img{:src => post.image_url }
+        .content
+          %li.body
+            = post.body
+          %li.author
+            .inline -
+            .inline
+              = post.author
       %hr

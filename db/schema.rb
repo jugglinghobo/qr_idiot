@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140112035036) do
+ActiveRecord::Schema.define(version: 20140112165450) do
 
   create_table "posts", force: true do |t|
     t.string   "author",     default: "anonym"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_url"
   end
 
 end

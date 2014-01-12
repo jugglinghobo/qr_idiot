@@ -4,12 +4,11 @@
     %meta{charset: "utf-8"}/
     %title QR INFO
     %link{href: "stylesheets/application.css", rel: "stylesheet"}/
-    %script{src: "javascript/application.js"}
+    %script{:src => "http://code.jquery.com/jquery-1.10.2.min.js"}
+    %script{:src => "javascript/application.js"}
   %body
     #wrapper
       #header
-        #gif
-          %img{:src => "/images/gif.gif"}
       #content
         =yield
       #footer

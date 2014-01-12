@@ -1,3 +1,5 @@
+#gif
+  %img{:src => @image_url}
 %h1
   = "Und dafür haben Sie jetzt extra diesen Code eingescannt..."
 %form{:action => "/create", :method => "post", :id => "new_form"}
@@ -7,7 +9,15 @@
     %li
       %input{:type => "text", :name => "post[author]", :placeholder => "Name", :id => "author"}
     %li
-      %label= "Ich akzeptiere, dass Ich gerade zwei Minuten meines Lebens verschwendet habe"
-      %input{:type => "checkbox"}
+      %label
+        = "Ich akzeptiere, dass Ich gerade zwei Minuten meines Lebens verschwendet habe"
+        %input{:type => "checkbox", :id => "agb_checkbox"}
+    #upload_image
+      %hr
+      %h1= "Beglücken Sie den nächsten Besucher mit einem neuen .gif"
+      %li
+        #new_image
+        #new_image_input
+          %input{:type => "text", :name => "image_url", :placeholder => "http://"}
     %li
       %input{:type => "submit", :value => "QR codes sind dumm", :class => "button", :id => "submit"}

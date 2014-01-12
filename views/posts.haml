@@ -1,13 +1,14 @@
-%h1
-  = "Keine Sorge, Sie sind nicht alleine..."
-%hr
-%ul#post_list
-  - @posts.each do |post|
-    .post
-      %li.body
-        = post.body
-      %li.author
-        .inline -
-        .inline
-          = post.author
-    %hr
+- if @posts.any?
+  %h1
+    = "Keine Sorge, Sie sind nicht alleine..."
+  %hr
+  %ul#post_list
+    - @posts.each do |post|
+      .post
+        %li.body
+          = post.body
+        %li.author
+          .inline -
+          .inline
+            = post.author
+      %hr

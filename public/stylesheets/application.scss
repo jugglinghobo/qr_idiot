@@ -4,6 +4,10 @@ $border: lightgrey;
   display: inline-block;
 }
 
+html {
+  height: 101%;
+}
+
 body {
   font: 62.5%/1.5  "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
   background: #ffffff;

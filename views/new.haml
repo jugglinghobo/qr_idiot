@@ -1,11 +1,11 @@
 #image
   %img{:src => @image_url}
 %h1
-  = "Und dafür haben Sie jetzt extra diesen Code eingescannt..."
+  = "Und dafür sind Sie jetzt extra hierher gekommen..."
 %form{:action => "/create", :method => "post", :id => "new_form"}
   %ul
     %li
-      %textarea{:name => "post[body]", :placeholder => "Lassen Sie ihren Gefühlen freien lauf", :id => "body"}
+      %textarea{:name => "post[body]", :placeholder => "Lassen Sie ihren Gefühlen freien Lauf", :id => "body"}
     %li
       %input{:type => "text", :name => "post[author]", :placeholder => "Name", :id => "author"}
     %li
@@ -14,7 +14,7 @@
         %input{:type => "checkbox", :id => "agb_checkbox"}
     #upload_image
       %hr
-      %h1= "Beglücken Sie den nächsten Besucher mit einem neuen .gif"
+      %h1= "Beglücken Sie den nächsten Besucher mit einem neuen Bild"
       %li
         #loading
           #floatingBarsG

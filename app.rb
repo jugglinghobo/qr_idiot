@@ -7,7 +7,7 @@ require './environments'
 require 'haml'
 require 'sass'
 
-@@image_url = "http://i.imgur.com/dBjHVLF.png"
+DEFAULT_URL = "http://i.imgur.com/dBjHVLF.png"
 
 get '/' do
   image_url
@@ -22,13 +22,11 @@ end
 
 post '/create' do
   preprocess_params
-  puts "#{@@image_url}"
   @post = Post.new params[:post]
   if @post.body?
     @post.save!
-    new_image_url = params[:image_url].presence || @post.image_url
-    puts "NEW IMAGE URL: #{new_image_url}"
-    @@image_url = new_image_url
+    new_image_url = params[:image_url].match(/.*(jpg|png|gif)$/) ? params[:image_url] : @post.image_url
+    self.image_url = new_image_url
     redirect '/posts'
   else
     redirect '/'
@@ -49,13 +47,11 @@ def preprocess_params
 end
 
 def image_url=(url)
-  puts "SETTING IMAGE URL: #{url}"
   @@image_url = url
-  puts "SET TO: #{@@image_url}"
 end
 
 def image_url
-  @image_url = @@image_url
+  @image_url = (@@image_url ||= DEFAULT_URL)
 end
 
 class Post < ActiveRecord::Base
